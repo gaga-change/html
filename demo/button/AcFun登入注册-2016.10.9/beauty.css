@@ -1,0 +1,55 @@
+body, button {
+    font: 14px STKaiti, Arial;
+    color: #222;
+}
+
+button, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    background-color: #fff;
+}
+
+button:focus {
+    outline: none;
+}
+
+/*结构*/
+.container {
+    padding: 20px;
+    /*background-color: AliceBlue;*/
+}
+
+.line {
+    width: 288px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.line button {
+    display: block;
+    height: 100%;
+    width: 134px;
+    font-size: inherit;
+    box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.1) ;
+}
+
+.login {
+    float: left;
+    color: #fff;
+    background-color: #67bdcd;
+}
+
+.logup {
+    float: right;
+    background-color: #fff;
+    border: 1px #c7c7c7 solid;
+}
+.login:hover { background-color: #5bb8c9; }
+
+.logup:hover { background-color: #f2f2f2;}
