@@ -27,14 +27,17 @@ a:hover, a:active {
     width: 100%;
     overflow: hidden;
 }
-.bc-nav div {
+.bc-nav img {
+    display: block;
     height: 170px;
     width: 100%;
-    padding-top: 12px;
-    margin-top: -12px;
+    /*padding-top: 12px;*/
+    /*margin-top: -12px;*/
     /*outline: 4px black solid;*/
-    background: no-repeat bottom center url("http://i0.hdslb.com/bfs/archive/453f101fac55d67988f0648ede2edb204afa1c36.png");
-    filter: blur(5px);
+    /*background: no-repeat bottom center url("http://i0.hdslb.com/bfs/archive/453f101fac55d67988f0648ede2edb204afa1c36.png");*/
+    /*filter: blur(5px);*/
+    /*-ms-filter: blur(5px);*/
+    /*filter: blur(5px);*/
 }
 .bc-ul {
     position: absolute;
@@ -75,4 +78,21 @@ a:hover, a:active {
     /*outline: 4px black solid;*/
     background: no-repeat center url("http://i0.hdslb.com/bfs/archive/453f101fac55d67988f0648ede2edb204afa1c36.png");
     filter: blur(0px);
+}
+
+.blur {
+    /*-webkit-filter: blur(10px); !* Chrome, Opera *!*/
+    /*-moz-filter: blur(10px);*/
+    /*-ms-filter: blur(10px);*/
+    /*filter: blur(10px);*/
+
+    /*filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); !* IE6~IE9 *!*/
+}
+.blur {
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+}
+:root .blur {
+    display: none; /* IE9+, Firefox, Chrome, Opera - hidden */
+    filter: none; /* no IE9 */
+
 }
