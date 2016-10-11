@@ -1,0 +1,69 @@
+body {
+    font: 14px STKaiti, Arial;
+    color: #222;
+}
+body, nav, a, ul, dd, dt, dl {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+a:link, a:visited {
+    color: #333;
+}
+a:hover, a:active {
+}
+.nav {
+    position: relative;
+    height: 170px;
+    background: no-repeat center url("http://i0.hdslb.com/bfs/archive/453f101fac55d67988f0648ede2edb204afa1c36.png");
+}
+.bc-nav {
+    position: absolute;
+    top: 0;
+    height: 42px;
+    width: 100%;
+    overflow: hidden;
+}
+.bc-nav div {
+    height: 170px;
+    width: 100%;
+    padding-top: 20px;
+    margin-top: -20px;
+    /*outline: 4px black solid;*/
+    background: no-repeat center url("http://i0.hdslb.com/bfs/archive/453f101fac55d67988f0648ede2edb204afa1c36.png");
+    filter: blur(10px);
+}
+.bc-ul {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.ul-nav:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+.ul-nav{
+    margin-left: auto;
+    margin-right: auto;
+    width: 970px;
+    /*background-color: red;*/
+}
+.ul-nav > li {
+    float: left;
+}
+.ul-nav > li > a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 10px;
+    text-decoration: none;
+    /*background-color: rgba(193, 193, 244, 0.8);*/
+}
+.ul-nav > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
