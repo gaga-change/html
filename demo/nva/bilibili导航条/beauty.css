@@ -2,7 +2,7 @@ body {
     font: 14px STKaiti, Arial;
     color: #222;
 }
-body, nav, a, ul, dd, dt, dl {
+body, nav, a, ul, dd, dt, dl{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,7 +18,7 @@ a:hover, a:active {
 .nav {
     position: relative;
     height: 170px;
-    background: no-repeat center url("http://i0.hdslb.com/bfs/archive/453f101fac55d67988f0648ede2edb204afa1c36.png");
+    background: no-repeat bottom center url("http://i0.hdslb.com/bfs/archive/453f101fac55d67988f0648ede2edb204afa1c36.png");
 }
 .bc-nav {
     position: absolute;
@@ -30,11 +30,11 @@ a:hover, a:active {
 .bc-nav div {
     height: 170px;
     width: 100%;
-    padding-top: 20px;
-    margin-top: -20px;
+    padding-top: 12px;
+    margin-top: -12px;
     /*outline: 4px black solid;*/
-    background: no-repeat center url("http://i0.hdslb.com/bfs/archive/453f101fac55d67988f0648ede2edb204afa1c36.png");
-    filter: blur(10px);
+    background: no-repeat bottom center url("http://i0.hdslb.com/bfs/archive/453f101fac55d67988f0648ede2edb204afa1c36.png");
+    filter: blur(5px);
 }
 .bc-ul {
     position: absolute;
@@ -66,4 +66,13 @@ a:hover, a:active {
 }
 .ul-nav > li > a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.test {
+    height: 170px;
+    width: 100%;
+    padding-top: 20px;
+    /*outline: 4px black solid;*/
+    background: no-repeat center url("http://i0.hdslb.com/bfs/archive/453f101fac55d67988f0648ede2edb204afa1c36.png");
+    filter: blur(0px);
 }
