@@ -1,4 +1,73 @@
 body{
+    padding: 30px !important;
     font: 14px "Sitka Text", Arial;
-    
+}
+body,ul{
+    padding: 0;
+    margin: 0;
+}
+.carousel{
+    background-color: red;
+    /*padding: 50px;*/
+    width: 440px;
+    height: 220px;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+.carousel-ul{
+    position: relative;
+    list-style-type: none;
+    width: 440px;
+    height: 220px;
+    border: none;
+    background-color: AliceBlue;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    animation: myDemo 20s infinite;
+    /*overflow: hidden;*/
+}
+.carousel-ul li{
+    position: absolute;
+    display: block;
+    width: 440px;
+    height: 220px;
+}
+.carousel-ul > li > a{
+    display: block;
+}
+.carousel-ul .b1{
+    transform: rotateY(0deg) translateZ(303px) ;
+}
+.carousel-ul .b2{
+    transform: rotateY(72deg) translateZ(303px) ;
+}
+.carousel-ul .b3{
+    transform: rotateY(144deg) translateZ(303px) ;
+}
+.carousel-ul .b4{
+    transform: rotateY(216deg) translateZ(303px) ;
+}
+.carousel-ul .b5{
+    transform: rotateY(288deg) translateZ(303px) ;
+}
+
+@keyframes myDemo {
+    0% {
+        /*transform-origin: center center;*/
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+    20% {
+        transform: rotate3d(0, 1, 0, -72deg);
+    }
+    40% {
+        transform: rotate3d(0, 1, 0, -144deg);
+    }
+    60% {
+        transform: rotate3d(0, 1, 0, -216deg);
+        /*transform-origin: center center;*/
+    }
+    80% {
+        transform: rotate3d(0, 1, 0, -288deg);
+        /*transform-origin: center center;*/
+    }
 }
