@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="beauty.css">
+</head>
+<body>
+<div class="carousel">
+    <ul class="carousel-ul">
+        <li><a class="b5" href="#"><img
+                src="http://i0.hdslb.com/bfs/archive/09c7f6f70de45e477ecdfc08b40cda77536ef996.jpg@.webp" alt=""></a>
+        </li>
+        <li><a class="b4" href="#"><img
+                src="http://i0.hdslb.com/bfs/archive/89034a38a9415654004ecf66d6455cca8513830d.jpg@.webp" alt=""></a>
+        </li>
+        <li><a class="b3" href="#"><img
+                src="http://i0.hdslb.com/bfs/archive/889c27bab8f2e2f7d412de9c8665fd9e48512f2f.jpg@.webp" alt=""></a>
+        </li>
+        <li><a class="b2" href="#"><img
+                src="http://i0.hdslb.com/bfs/archive/c89d65cb9c56d819c688464e712a38bb6e3dc3ac.jpg@.webp" alt=""></a>
+        </li>
+        <li><a class="b1" href="#"><img
+                src="http://i0.hdslb.com/bfs/archive/9203c484590de9105e9d54dafcd1a5646f6d2e04.jpg@.webp" alt=""></a>
+        </li>
+    </ul>
+</div>
+<br>
+<br>
+<ul>
+    <li>http://i0.hdslb.com/bfs/archive/09c7f6f70de45e477ecdfc08b40cda77536ef996.jpg@.webp</li>
+    <li>http://i0.hdslb.com/bfs/archive/89034a38a9415654004ecf66d6455cca8513830d.jpg@.webp</li>
+    <li>http://i0.hdslb.com/bfs/archive/889c27bab8f2e2f7d412de9c8665fd9e48512f2f.jpg@.webp</li>
+    <li>http://i0.hdslb.com/bfs/archive/c89d65cb9c56d819c688464e712a38bb6e3dc3ac.jpg@.webp</li>
+    <li>http://i0.hdslb.com/bfs/archive/9203c484590de9105e9d54dafcd1a5646f6d2e04.jpg@.webp</li>
+</ul>
+
+<h2>横向三D轮播图解析</h2>
+<ul>
+    <li><h4>需要的定律</h4>
+        <ul>
+            <li>等边多边形外角之和为360度</li>
+            <li>等边多变行中心点到每边的距离相等</li>
+        </ul>
+    </li>
+    <li><h4>经过自己的计算得出的规律</h4>
+        <ul>
+            <li>
+                <pre>rotateY(k) = 360/n*(k-1) <br> <small>k=1,2,3,4......n; n:图片的个数,k:当前图片</small></pre>
+            </li>
+            <li>
+                translateZ = Math.tan((Math.PI - (Math.PI*2/n))/2)*w/2 <br>
+                <small>n:图片的个数,w:图片的宽度</small>
+                <br>比如,5张图片,高度为440的时候  translateZ的值应该为 约为 303 px
+            </li>
+        </ul>
+    </li>
+</ul>
+<h2 style="color: indianred">值得注意的是</h2>
+<ul>
+    <li>很明显会出现图层混乱的问题,很正常,因为图像优先级的问题(很多图片重叠在一起肯定有老大的)</li>
+    <li>处理方式:让当前显示的两张图片(因为有替换的过程所以是两张)的优先级设置为最高(z-index)</li>
+    <li>可以用js可以处理</li>
+</ul>
+</body>
+</html>
