@@ -1,0 +1,23 @@
+body{
+    margin: 110px 0 0 0;
+    background-color: AliceBlue;
+}
+.con {
+    width: 200px;
+    height: 3000px;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*height: 110px;*/
+    background-color: #deffdf;
+}
+.header-one {
+    height: 32px;
+    background-color: #a4ffa1;
+}
+.header-con {
+    height: 78px;
+    background-color: #d787ff;
+}
