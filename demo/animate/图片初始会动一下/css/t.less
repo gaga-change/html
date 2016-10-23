@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+}
+
+.div(@w, @h, @bc: #fff) {
+  width: @w;
+  height: @h;
+  background-color: @bc;
+}
+
+.c {
+  .div(100px, 200px, AliceBlue);
+}
+
+.b {
+  position: relative;
+  .div(100%, 3000px, #a7ff9e);
+}
+
+.test {
+  position: relative;
+  top: 1500px;
+  .div(100px, 100px);
+}
+
+.test2 {
+  .div(100px, 200px, green);
+}
+
+[data-move] {
+  transition: all 500ms ease 1s;
+  transform: translateY(0px);
+}
+
+.move-top {
+  transform: translateY(-50px);
+}
+.move-left {
+  transform: translateY(-50px);
+}
+.move-right {
+  transform: translateY(50px);
+}
+.move-down {
+  transform: translateY(50px);
+}
