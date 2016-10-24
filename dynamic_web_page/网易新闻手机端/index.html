@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="wyApp" ng-cloak lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>网易新闻主页</title>
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../../bower_components/angular/angular.min.js"></script>
-    <script src="../../bower_components/angular-animate/angular-animate.min.js"></script>
-    <!--<script src="../../bower_components/GreenSock-JS/src/minified/TimelineMax.min.js"></script>-->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>网易新闻主页</title>
+	<meta name="description" content="新闻">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/m.css">
+	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script src="../../bower_components/angular/angular.min.js"></script>
+
 </head>
-<body ng-app="myApp" ng-cloak>
-<div ng-controller="Ctrl">
+<body ng-controller="wyCtrl">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgradyour
+	browser</a> to improve your experience.</p>
+<![endif]-->
+<!--顶部-->
+<header class=" head-top" ng-include="templates.head.url" data-id="heatTop"></header>
+<!--导航条-->
+<nav class="" data-id="nav">
+</nav>
+<!--内容-->
+<div class="contain container-fluid">
 
 </div>
+<!--页脚-->
+<footer>
+
+</footer>
+<!--反馈和回到顶部-->
+<div class="tools">
+
+</div>
+
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../bower_components/angular-animate/angular-animate.min.js"></script>
+
+<script src="js/index.js"></script>
+<script src="js/app.module.js"></script>
+<script src="js/app.controller.js"></script>
 </body>
-<script>
-    angular.module('myApp', [])
-            .controller('Ctrl', ['$scope', function ($scope) {
-
-            }]);
-    window.onresize = function () {
-        var w=window.innerWidth
-                || document.documentElement.clientWidth
-                || document.body.clientWidth;
-
-        var h=window.innerHeight
-                || document.documentElement.clientHeight
-                || document.body.clientHeight;
-        console.log('w', w);
-        console.log('h', h);
-    }
-</script>
 </html>
