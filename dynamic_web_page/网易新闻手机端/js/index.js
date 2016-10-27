@@ -5,35 +5,45 @@ $(document).ready(function () {
     var w = window.innerWidth;
     var h = window.innerHeight;
     var headTop = $('[data-id = heatTop]')
-    headTop.css({
-        height: h * 0.075
-    });
     var nav = $('[data-id = nav]');
-    console.log(nav);
-
-    nav.css({
-        height: h * 0.075 + 'px',
-        top: h * 0.075 + 'px'
-    });
+    hnSet();
+    hnScroll();
     window.onscroll = function (e) {
+        hnScroll()
+    };
+    window.onresize = function (e) {
+        w = window.innerWidth;
+        h = window.innerHeight;
+        hnSet();
+    };
+    function hnScroll() {
         if ($('body')[0].scrollTop > h * 0.075) {
             headTop.css({
                 height: 0
             });
             nav.css({
-                top: 1 + 'px'
+                top: 0 + 'px'
             });
-        }else {
+        } else {
             headTop.css({
-                height: h * 0.075
+                height: h * 0.075 + 'px'
             });
             nav.css({
                 top: h * 0.075 + 'px'
             });
         }
-    };
-    window.onresize = function (e) {
-        w = window.innerWidth;
-        h = window.innerHeight;
+    }
+    function hnSet() {
+        headTop.css({
+            height: h * 0.075 + 'px',
+            lineHeight: h * 0.075 + 'px',
+            left: ($('body')[0].clientWidth - headTop[0].clientWidth) / 2 + 'px'
+        });
+        nav.css({
+            height: h * 0.075 + 'px',
+            lineHeight: h * 0.075 + 'px',
+            top: h * 0.075 + 'px',
+            left: ($('body')[0].clientWidth - headTop[0].clientWidth) / 2 + 'px'
+        });
     }
 });

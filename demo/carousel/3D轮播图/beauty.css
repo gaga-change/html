@@ -21,8 +21,8 @@ body,ul{
     height: 220px;
     border: none;
     background-color: AliceBlue;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
+    /*transform-style: preserve-3d;*/
+    /*-webkit-transform-style: preserve-3d;*/
     animation: myDemo 20s infinite;
     /*overflow: hidden;*/
 }

@@ -1,20 +1,12 @@
 /**
- * Created by qingyun2 on 16/10/24.
+ * Created by qingyun2 on 16/10/25.
  */
 
-angular.module('wyApp')
-    .controller('wyCtrl', ['$scope', function ($scope) {
-        $scope.templates = {
-            head: {
-                url: 'template/head.html'
-            },
-            nav: {
-                url: 'template/bar-list.html'
-            }
-        }
-    }])
-    .controller('barListCtrl', ['$scope', function ($scope) {
-        $scope.bars = [
+app.component('barList', {
+    templateUrl: 'template/bar-list.html',
+    controller: function () {
+        var self = this;
+        self.bars = [
             {name: '推荐'},
             {name: '新闻'},
             {name: '娱乐'},
@@ -50,10 +42,6 @@ angular.module('wyApp')
             {name: '漫画'},
             {name: 'BoBo'}
         ];
-        $scope.slideDown = function () {
-            console.log('sss');
-        };
-        //点击菜单后,自动把该元素移动到 靠近左边的地方
-        //1.监听点击事件,点击后 改变路径
-        //2.监听路径变化,根据路径 获取到目标元素,改变它的位置
-    }]);
+    }
+
+});

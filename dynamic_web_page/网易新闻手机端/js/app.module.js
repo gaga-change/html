@@ -2,6 +2,6 @@
  * Created by qingyun2 on 16/10/24.
  */
 
-angular.module('wyApp', [
+var app = angular.module('wyApp', [
     'ngAnimate'
 ]);

@@ -1,0 +1,139 @@
+header,
+nav,
+.contain,
+footer {
+  display: block;
+  padding: 0 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #222;
+}
+.contain {
+  background-color: AliceBlue;
+  height: 3000px;
+}
+footer {
+  height: 30px;
+  background-color: #0f0f0f;
+}
+.head-top {
+  display: inline-block;
+  height: 70%;
+  width: 100%;
+  vertical-align: middle;
+  background-color: AliceBlue;
+}
+.head-top a {
+  display: inline-block;
+  height: 100%;
+  padding: 0;
+  float: left;
+}
+.head-top .personal {
+  width: 6%;
+  background: url("../img/icon-personal-v2.png") center center no-repeat;
+  background-size: contain;
+}
+.head-top .logo {
+  width: 78%;
+  background: url("../img/logo_2016_v2.png") center center no-repeat;
+  background-size: contain;
+}
+.head-top .app-download {
+  width: 6%;
+  background: url("../img/app_download_v2.png") center center no-repeat;
+  background-size: contain;
+}
+.head-top .icon-email {
+  width: 6%;
+  position: relative;
+  left: 4%;
+  background: url("../img/icon-email-v2.png") center center no-repeat;
+  background-size: contain;
+}
+.bar-fa {
+  position: relative;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
+  background-color: #FF3333;
+  color: #dee9e9;
+}
+.bar-fa .bar-ul-fa {
+  position: relative;
+  float: left;
+  width: 90%;
+  height: 100%;
+}
+.bar-fa .bar-ul {
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  padding-bottom: 30px;
+  margin-bottom: -30px;
+  text-wrap: none;
+  white-space: nowrap;
+  overflow: scroll;
+}
+.bar-fa .bar-slide-down {
+  position: relative;
+  float: right;
+  width: 10%;
+  height: 100%;
+  font-size: 1.5em;
+  font-weight: 100;
+  overflow: hidden;
+}
+.bar-fa .shadow {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+.bar-fa .shadow.l {
+  left: 0;
+  margin-left: -20px;
+  box-shadow: 10px 0px 10px 10px #FF3333;
+}
+.bar-fa .shadow.r {
+  margin-right: -5px;
+  right: 0;
+  box-shadow: -10px 0px 10px 10px #FF3333;
+}
+.bar-ul li a:link,
+.bar-ul li a:visited,
+.bar-ul li a:hover,
+.bar-ul li a:active {
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.bar-ul > li > a {
+  color: #dee9e9;
+}
+.bar-ul > li > a:hover {
+  color: #EEF9F9;
+  font-size: 1.2em;
+}
+.bar-ul span.glyphicon {
+  vertical-align: middle;
+}
