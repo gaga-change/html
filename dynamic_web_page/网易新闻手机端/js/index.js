@@ -4,20 +4,21 @@
 $(document).ready(function () {
     var w = window.innerWidth;
     var h = window.innerHeight;
-    var headTop = $('[data-id = heatTop]')
+    var headTop =  $('[data-id = headTop]');
     var nav = $('[data-id = nav]');
+    var con = $('[data-id = con]');
     hnSet();
     hnScroll();
-    window.onscroll = function (e) {
+    $(window).scroll(function (e) {
         hnScroll()
-    };
-    window.onresize = function (e) {
+    });
+    $(window).resize (function (e) {
         w = window.innerWidth;
         h = window.innerHeight;
         hnSet();
-    };
+    });
     function hnScroll() {
-        if ($('body')[0].scrollTop > h * 0.075) {
+        if ($(window).scrollTop() > h * _b) {
             headTop.css({
                 height: 0
             });
@@ -26,24 +27,25 @@ $(document).ready(function () {
             });
         } else {
             headTop.css({
-                height: h * 0.075 + 'px'
+                height: h * _b + 'px'
             });
             nav.css({
-                top: h * 0.075 + 'px'
+                top: h * _b + 'px'
             });
         }
     }
+
     function hnSet() {
         headTop.css({
-            height: h * 0.075 + 'px',
-            lineHeight: h * 0.075 + 'px',
-            left: ($('body')[0].clientWidth - headTop[0].clientWidth) / 2 + 'px'
+            height: h * _b + 'px',
+            lineHeight: h * _b + 'px',
+            left: ($('body')[0].clientWidth - headTop.get(0).clientWidth) / 2 + 'px'
         });
         nav.css({
-            height: h * 0.075 + 'px',
-            lineHeight: h * 0.075 + 'px',
-            top: h * 0.075 + 'px',
-            left: ($('body')[0].clientWidth - headTop[0].clientWidth) / 2 + 'px'
+            height: h * _b + 'px',
+            lineHeight: h * _b + 'px',
+            top: h * _b + 'px',
+            left: ($('body')[0].clientWidth - headTop.get(0).clientWidth) / 2 + 'px'
         });
     }
 });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="wyApp" ng-cloak lang="en">
+<html ng-app="wyApp" ng-cloak lang="en" ng-controller="rootCtrl">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../bower_components/animate.css/animate.min.css">
 	<script src="../../bower_components/angular/angular.min.js"></script>
-
+	<script src="js/app.module.js"></script>
 </head>
 <body ng-controller="wyCtrl">
 <!--[if lt IE 8]>
@@ -17,14 +18,16 @@
 	browser</a> to improve your experience.</p>
 <![endif]-->
 <!--顶部-->
-<header class="" ng-include="templates.head.url" data-id="heatTop"></header>
+<header class="" ng-include="templates.head.url" data-id="headTop"></header>
 <!--导航条-->
 <nav class="" ng-include="templates.nav.url" data-id="nav" ng-controller="barListCtrl">
 </nav>
 <!--内容-->
-<div class="contain container-fluid">
-
+<div class="contain container-fluid" data-id="con" style="margin-top:{{conMarginTop}}">
+	<!--<ng-view></ng-view>-->
+	<div ng-view></div>
 </div>
+
 <!--页脚-->
 <footer>
 
@@ -37,9 +40,12 @@
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../../bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="../../bower_components/angular-route/angular-route.min.js"></script>
+
+
 
 <script src="js/index.js"></script>
-<script src="js/app.module.js"></script>
+<script src="js/app.config.js"></script>
 <script src="js/app.controller.js"></script>
 <!--<script src="js/bar-list.component.js"></script>-->
 </body>

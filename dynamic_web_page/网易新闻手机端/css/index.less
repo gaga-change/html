@@ -7,8 +7,12 @@ header, nav, .contain, footer {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  //overflow: hidden;
+  background-color: AliceBlue;
+}
+
+header, nav {
   transition: all 1s ease;
-  overflow: hidden;
 }
 
 header {
@@ -92,6 +96,8 @@ footer {
     width: 100%;
     height: 100%;
     box-sizing: content-box;
+    //padding-left: 20px;
+    //padding-right: 20px;
     padding-bottom: 30px;
     margin-bottom: -30px;
     text-wrap: none;
@@ -107,6 +113,7 @@ footer {
     font-size: 1.5em;
     font-weight: 100;
     overflow: hidden;
+    background-color: #FF3333;
   }
   .shadow {
     position: absolute;
@@ -149,6 +156,12 @@ footer {
       user-select: none;
     }
   }
+  & > li:first-child {
+    margin-left: 15px;
+  }
+  & > li:last-of-type {
+    margin-right: 20px;
+  }
   & > li {
     & > a {
       color: #dee9e9;
@@ -163,5 +176,48 @@ footer {
   }
   span.glyphicon {
     vertical-align: middle;
+  }
+}
+
+.slide-down-fa {
+  box-sizing: content-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  z-index: -10;
+  width: 100%;
+  background-color: rgba(217, 227, 227, 0.6);
+  display: none;
+  a {
+    &:link, &:visited, &:hover, &:visited {
+      color: #2c2c2c;
+      text-decoration: none;
+    }
+    font-size: 1.1em;
+  }
+}
+
+.slide-down-fa.bounceInDown, .slide-down-fa.bounceOutUp {
+  display: block;
+}
+
+.out-ul {
+  li {
+    display: inline-block;
+    width: 15%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    a {
+      display: inline-block;
+      &:link, &:visited, &:hover, &:visited {
+        font-size: .8rem;
+      }
+      img {
+      }
+      span {
+
+      }
+    }
   }
 }

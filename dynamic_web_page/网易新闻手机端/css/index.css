@@ -7,8 +7,11 @@ footer {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  background-color: AliceBlue;
+}
+header,
+nav {
   transition: all 1s ease;
-  overflow: hidden;
 }
 header {
   position: fixed;
@@ -100,6 +103,7 @@ footer {
   font-size: 1.5em;
   font-weight: 100;
   overflow: hidden;
+  background-color: #FF3333;
 }
 .bar-fa .shadow {
   position: absolute;
@@ -127,6 +131,12 @@ footer {
   -ms-user-select: none;
   user-select: none;
 }
+.bar-ul > li:first-child {
+  margin-left: 15px;
+}
+.bar-ul > li:last-of-type {
+  margin-right: 20px;
+}
 .bar-ul > li > a {
   color: #dee9e9;
 }
@@ -136,4 +146,44 @@ footer {
 }
 .bar-ul span.glyphicon {
   vertical-align: middle;
+}
+.slide-down-fa {
+  box-sizing: content-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  z-index: -10;
+  width: 100%;
+  background-color: rgba(217, 227, 227, 0.6);
+  display: none;
+}
+.slide-down-fa a {
+  font-size: 1.1em;
+}
+.slide-down-fa a:link,
+.slide-down-fa a:visited,
+.slide-down-fa a:hover,
+.slide-down-fa a:visited {
+  color: #2c2c2c;
+  text-decoration: none;
+}
+.slide-down-fa.bounceInDown,
+.slide-down-fa.bounceOutUp {
+  display: block;
+}
+.out-ul li {
+  display: inline-block;
+  width: 15%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+.out-ul li a {
+  display: inline-block;
+}
+.out-ul li a:link,
+.out-ul li a:visited,
+.out-ul li a:hover,
+.out-ul li a:visited {
+  font-size: .8rem;
 }
