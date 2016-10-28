@@ -1,0 +1,33 @@
+.slide-animate-container {
+  position: relative;
+  overflow: hidden;
+}
+.slide-animate {
+  width: 100%;
+}
+.slide-animate.ng-enter,
+.slide-animate.ng-leave {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  opacity: 1;
+}
+.slide-animate.ng-enter {
+  left: -500px;
+  opacity: 0;
+}
+.slide-animate.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1;
+}
+.slide-animate.ng-leave {
+  left: 0;
+  opacity: 1;
+}
+.slide-animate.ng-leave.ng-leave-active {
+  left: 500px;
+  opacity: 0;
+}

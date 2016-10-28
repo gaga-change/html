@@ -2,7 +2,7 @@
 	<div class="bar-ul-fa">
 		<ul class="bar-ul list-inline">
 			<li ng-repeat="b in bars | filter:{out:!true}">
-				<a ng-href="#!/list/{{b.url}}" ng-click="aClick('a')">{{b.name}}</a>
+				<a ng-href="#!/news/{{b.url}}" ng-click="aClick('a')">{{b.name}}</a>
 			</li>
 			<div class="shadow l"></div>
 			<div class="shadow r"></div>
@@ -15,7 +15,7 @@
 <div class="slide-down-fa animated" ng-if="slideDownFaShow" style="height: {{h*(1- _b)}}px" data-id="slideDownFa">
 	<ul class="list-unstyled list-inline">
 		<li ng-repeat="b in bars | filter: {out:!true}">
-			<a href="#!/list/{{b.url}}" ng-click="aClick('b')">{{b.name}}</a>
+			<a href="#!/news/{{b.url}}" ng-click="aClick('b')">{{b.name}}</a>
 		</li>
 	</ul>
 	<hr>

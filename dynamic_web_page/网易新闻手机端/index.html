@@ -6,9 +6,10 @@
 	<title>网易新闻主页</title>
 	<meta name="description" content="新闻">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../../bower_components/animate.css/animate.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<script src="../../bower_components/angular/angular.min.js"></script>
 	<script src="js/app.module.js"></script>
 </head>
@@ -23,9 +24,9 @@
 <nav class="" ng-include="templates.nav.url" data-id="nav" ng-controller="barListCtrl">
 </nav>
 <!--内容-->
-<div class="contain container-fluid" data-id="con" style="margin-top:{{conMarginTop}}">
+<div class="contain container-fluid slide-animate-container" data-id="con" style="margin-top:{{conMarginTop}}">
 	<!--<ng-view></ng-view>-->
-	<div ng-view></div>
+	<div class="slide-animate" ng-view></div>
 </div>
 
 <!--页脚-->

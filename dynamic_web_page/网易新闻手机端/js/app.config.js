@@ -4,13 +4,12 @@
 app.config(['$locationProvider', '$routeProvider',
     function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
-
         $routeProvider
-            .when('/list', {
-                template: '<div>gaga</div>'
+            .when('/news/xinwen', {
+                templateUrl: 'template/detail.html'
             })
-            .when('/list/:listId', {
-                template: '<div>gaga-change</div>'
+            .when('/news/:listId', {
+                templateUrl: 'template/detail.html'
             })
-            .otherwise('/list')
+            .otherwise('/news/xinwen');
     }]);
