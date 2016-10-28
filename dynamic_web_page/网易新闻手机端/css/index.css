@@ -22,11 +22,11 @@ nav {
   position: fixed;
   width: 100%;
   background-color: #222;
+  z-index: -1000;
 }
 .contain {
-  background-color: AliceBlue;
-  height: 3000px;
-  padding: 0;
+  background-color: red;
+  height: 100px;
 }
 footer {
   height: 30px;
@@ -155,7 +155,7 @@ footer {
   padding-right: 15px;
   margin-left: -15px;
   margin-right: -15px;
-  z-index: -10;
+  z-index: 10;
   width: 100%;
   background-color: rgba(217, 227, 227, 0.6);
   display: none;
@@ -191,9 +191,4 @@ footer {
 }
 .out-ul li a span {
   display: inline-block;
-}
-.con-detail {
-  width: 100%;
-  height: 300px;
-  background-color: #cc6994;
 }

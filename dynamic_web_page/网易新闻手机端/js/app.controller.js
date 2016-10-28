@@ -81,6 +81,19 @@ angular.module('wyApp')
     .controller('con', ['$scope', function ($scope) {
 
     }])
-    .controller('detailCtrl', ['scope', '$routeParams', '$http', function ($scope, $routeParams, $http) {
-
+    .controller('detailCtrl', ['$scope', '$routeParams', '$http', function ($scope, $routeParams, $http) {
+        var serverId = 'BBM54PGAwangning';
+        getList(serverId, 0, 10, function (data) {
+            console.log(data);
+        });
+        function getList(serverId, s, n, fn) {
+            var url = 'http://3g.163.com/touch/reconstruct/article/list/' + serverId + '/' + s + '-' + n + '.html';
+            $.post('http://www.yanjundong.com/tools/jsonp', {url: url}, function (data) {
+                var str = data.data;
+                var re = new RegExp(/^(artiList\()(.*)\)$/, 'g');
+                var result = re.exec(str);
+                var d = JSON.parse(result[2]);
+                fn(d[serverId]);
+            });
+        }
     }]);

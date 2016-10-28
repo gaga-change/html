@@ -1,6 +1,10 @@
 /**
  * Created by qingyun2 on 16/10/24.
  */
+function artiList(data) {
+    console.log(data);
+}
+
 $(document).ready(function () {
     var w = window.innerWidth;
     var h = window.innerHeight;

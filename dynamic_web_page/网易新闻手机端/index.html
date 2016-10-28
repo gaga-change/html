@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<script src="../../bower_components/angular/angular.min.js"></script>
 	<script src="js/app.module.js"></script>
+
 </head>
 <body ng-controller="wyCtrl">
 <!--[if lt IE 8]>
@@ -24,9 +25,10 @@
 <nav class="" ng-include="templates.nav.url" data-id="nav" ng-controller="barListCtrl">
 </nav>
 <!--内容-->
-<div class="contain container-fluid slide-animate-container" data-id="con" style="margin-top:{{conMarginTop}}">
+<!--<div class="contain container-fluid slide-animate-container" data-id="con" style="margin-top:{{conMarginTop}}">-->
+<div class="contain "style="margin-top:{{conMarginTop}}">
 	<!--<ng-view></ng-view>-->
-	<div class="slide-animate" ng-view></div>
+	<!--<div class="slide-animate" ng-view></div>-->
 </div>
 
 <!--页脚-->
