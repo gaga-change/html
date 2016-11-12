@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="http://www.yanjundong.com/js/lib/jQuery.min.js"></script>
+	<style>
+		.banner-background {
+			height: 480px;
+			background: center 0 url("img/bg.jpg");
+
+		}
+
+		.con {
+			width: 100%;
+			height: 3000px;
+			background-color: yellowgreen;
+		}
+	</style>
+</head>
+<body>
+<!--banner-->
+<div id="banner" class="banner-background">
+
+</div>
+<div class="con"></div>
+<script>
+	$(window).on('scroll', function (e) {
+		var top = $(document).scrollTop();
+		$('#banner').css({backgroundPositionY: top / 2 + 'px'});
+	})
+</script>
+</body>
+</html>
