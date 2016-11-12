@@ -8,7 +8,10 @@
 		.banner-background {
 			height: 480px;
 			background: center 0 url("img/bg.jpg");
-
+			background-size: cover;
+			/*background-size: contain;*/
+			opacity: 0;
+			transition: opacity 1000ms ease-in-out;
 		}
 
 		.con {
@@ -25,6 +28,12 @@
 </div>
 <div class="con"></div>
 <script>
+	(function ($) {
+		setTimeout(function () {
+			$('#banner').css({'opacity': 1});
+		}, 10);
+	}($));
+//	$('#banner').css({'opacity': 1});
 	$(window).on('scroll', function (e) {
 		var top = $(document).scrollTop();
 		$('#banner').css({backgroundPositionY: top / 2 + 'px'});
