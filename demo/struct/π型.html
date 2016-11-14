@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	/*顶部*/
+	.header {
+		position: fixed;
+		top: 0;
+		height: 51px;
+		width: 100%;
+		background-color: #cd8fba;
+	}
+	/*左部*/
+	.content {
+		position: fixed;
+		top: 51px;
+		bottom: 0;
+		width: 25%;
+		z-index: 1000;
+		padding: 20px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		box-shadow: 1px 2px 5px 0px black;
+		background-color: aqua;
+	}
+</style>
+<body>
+<div class="header">header</div>
+<div class="content">menu-left</div>
+<div class="footer"></div>
+</body>
+</html>
