@@ -1,10 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="zh-cmn-Hans">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>双子形</title>
+    <meta charset="utf-8">
+    <meta name="description" content="双子形结构">
+    <meta name="author" content="jundong">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0
+    maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-
+<h3 class="text-center">这种情况下 ， 左右两边高是不对等的</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 bg-danger">
+            gaga
+        </div>
+        <div class="col-xs-6 bg-warning ">
+            gaga <br>
+            gaga
+        </div>
+    </div>
+</div>
+<h3 class="text-center">对等解决，目的，左边的高随右边高的边大而变大的效果</h3>
+<ol>
+    <li>仔细分析。其实我就是要两个背景实现等高罢了。</li>
+    <li>父标签的高度肯定是包含了所有内容。</li>
+    <li>那么背景用几个新div设置。产生一种两边div等高的效果</li>
+</ol>
+<div class="container" style="position: relative">
+    <div class="row">
+        <div class="col-xs-6  ">
+            gaga
+            gaga <br>
+            gaga <br>
+            gaga <br>
+        </div>
+        <div class="col-xs-6   ">
+            gaga <br>
+            gaga <br>
+            gaga <br>
+            gaga <br>
+            gaga <br>
+        </div>
+    </div>
+    <style>
+        .bg{position: absolute; width: 100%;height: 100%;top: 0;z-index: -1;}
+        .bg>div{height: 100%}
+    </style>
+    <div class="bg">
+        <div class="bg-info col-xs-6"></div>
+        <div class="bg-warning col-xs-6"></div>
+    </div>
+</div>
 </body>
 </html>
