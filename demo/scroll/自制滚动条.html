@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+</head>
+<style>
+    div {
+        box-sizing: border-box;
+    }
+
+    .g-fa {
+        position: fixed;
+        width: 300px;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        background-color: gray;
+    }
+
+    .fa {
+        width: 340px;
+        height: 100%;
+        background-color: yellowgreen;
+        overflow-y: scroll;
+        padding-right: 50px;
+    }
+
+    .scroll-bar {
+        position: absolute;
+        width: 10px;
+        /*background-color: red;*/
+        border: 1px solid gray;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+    .scroll-bar-son {
+        position: absolute;
+        width: 100%;
+        background-color: gold;
+    }
+</style>
+<body>
+<div class="g-fa"> <!--为了遮挡原生滚动条-->
+    <div class="fa" id="fa"> <!--添加溢出滚动-->
+        <div class="con" id="con"> <!--为了得到整个内容的高-->
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+            haha <br>
+        </div>
+        <div class="scroll-bar">
+            <div class="scroll-bar-son" id="barSon"></div>
+        </div>
+    </div>
+</div>
+<script src="../../lib/jquery/jquery.min.js"></script>
+<script>
+    /**
+     * 分三段 上段 中段 下段
+     * 首先需要这些值
+     * 1.视口的高度（中段）   zhong-h
+     * 2.内容的总高（上中下之和）   all-h
+     * 3.滑出内容的高度（上段）  shang-h
+     * 4.下段  xia-h =  all-h - zhong-h - shang-h
+     * 自动义滚动条分两部分  滑块 和 滑条
+     * 1.滑块的高度  son-h = zhong-h/all-h  * fa-h
+     * 2.滑条的高度  fa-h =  zhong-h
+     * 3.滑块距离上面的距离（top） top = shang-h/all-h * fa-h
+     */
+
+
+    function gaga () {
+        var zhong_h = $(window).height();
+        var all_h = $("#con").height();
+        var shang_h = $("#fa").scrollTop();
+
+        var fa_h = zhong_h;
+        var son_h = (zhong_h/all_h) * fa_h;
+        var top = shang_h/all_h * fa_h;
+
+        var barSon = $("#barSon");
+        barSon.css({
+            height: son_h + "px",
+            top : top + "px"
+        });
+    }
+    gaga();
+    $("#fa").scroll(gaga);
+    $(window).resize(gaga);
+</script>
+</body>
+</html>
